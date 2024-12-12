@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Gastos</title>
+    <div id="totals">
+        <p>Total Ingresos: <span id="total-ingresos">0</span></p>
+        <p>Total Egresos: <span id="total-egresos">0</span></p>
+        <p>Total Balance: <span id="total-balance">0</span></p>
+    </div>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <button id="import-btn">Importar CSV</button>
+        <button id="export-btn">Exportar CSV</button>
+        <input type="file" id="import-csv" style="display: none;">
+    </div>
+    <h1>Bitácora de Gastos</h1>
+    <form id="expense-form">
+        <label for="type">Tipo:</label>
+        <select id="type" name="type" required>
+            <option value="Ingreso">Ingreso</option>
+            <option value="Egreso">Egreso</option>
+        </select>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="amount">Cantidad:</label>
+        <input type="number" id="amount" name="amount" required>
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit">Agregar</button>
+    </form>
+    <table id="expense-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Tipo</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+   
+    <script src="script.js"></script>
+</body>
+</html>
