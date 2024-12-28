@@ -1,51 +1,138 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora de Gastos</title>
-    <div id="totals">
-        <p>Total Ingresos: <span id="total-ingresos">0</span></p>
-        <p>Total Egresos: <span id="total-egresos">0</span></p>
-        <p>Total Balance: <span id="total-balance">0</span></p>
-    </div>
-    <link rel="stylesheet" href="styles.css">
+    <title>Accesos Directos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapers.com/images/featured-full/kali-linux-aopaijkc6i77lb07.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 0;
+            color: #fff; /* Ajusta el color del texto para que sea visible */
+        }
+
+        /* Ajuste del contenedor principal */
+        .button-group {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para resaltar contenido */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        .top-links {
+            display: flex;
+            gap: 10px;
+        }
+        .top-link {
+            font-size: 12px;
+            color: #3498db;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+        }
+
+        /* Grupos de botones */
+        .group-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .grid-button {
+            padding: 10px;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        /* Colores para cada botón */
+        .btn1 { background-color: #6470f6; }
+        .btn2 { background-color: #6470f6; }
+        .btn3 { background-color: #6470f6; }
+        .btn4 { background-color: #6470f6; }
+        .btn5 { background-color: #6470f6; }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <button id="import-btn">Importar CSV</button>
-        <button id="export-btn">Exportar CSV</button>
-        <input type="file" id="import-csv" style="display: none;">
+    
+
+    <!-- Grupos de botones -->
+    <div class="button-group">
+        <h2 class="group-title">VISUALIZADORES</h2>
+
+              <a href="https://script.google.com/macros/s/AKfycbytED49xkGSIT3Pkfs8x4lEdFLuG0I22wt0z4BZSMcddLi4CQlPxapv5JK2vRFTFJza/exec" target="_blank">
+                <button class="grid-button btn1">REABASTOS PRE-ALLOCATED</button>
+            </a>
+            
+                
+
+            
+        </div>
     </div>
-    <h1>Bitácora de Gastos</h1>
-    <form id="expense-form">
-        <label for="type">Tipo:</label>
-        <select id="type" name="type" required>
-            <option value="Ingreso">Ingreso</option>
-            <option value="Egreso">Egreso</option>
-        </select>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="amount">Cantidad:</label>
-        <input type="number" id="amount" name="amount" required>
-        <label for="date">Fecha:</label>
-        <input type="date" id="date" name="date" required>
-        <button type="submit">Agregar</button>
-    </form>
-    <table id="expense-table">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Tipo</th>
-                <th>Nombre</th>
-                <th>Cantidad</th>
-                <th>Fecha</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-   
-    <script src="script.js"></script>
+
+    <div class="button-group">
+        <h2 class="group-title">CARPETA PARA VISUALIZADORES</h2>
+        
+        <div class="grid-container">
+            <a href="https://drive.google.com/drive/folders/12OiSNpFX5UAM0wr6udfIrWpXdA_Xystp" target="_blank">
+                <button class="grid-button btn2">ASN STATUS,ILPNS ATRI,ITEM MASTER,INVENTORY</button>
+            </a>
+
+            
+        </div>
+    </div>
+
+<div class="button-group">
+        <h2 class="group-title">PLATAFORMAS</h2>
+        <div class="grid-container">
+            <a href="
+                https://xb.sdpondemand.manageengine.com/app/itdesk/HomePage.do
+                " target="_blank">
+                <button class="grid-button btn5">ZOHO TICKETS</button>
+            </a>
+
+            <a href="https://xbadmin.xbfulfillment.com/index.php" target="_blank">
+                <button class="grid-button btn5">PLATAFORMA CONTENEDORES</button>
+            </a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMxq7JLNWmXLiGj7kCoUVBStX4feJeQxmr0DtCJUNBHruYLA/viewform" target="_blank">
+                <button class="grid-button btn5">FORMULARIO 5s</button>
+            </a>
+
+            <a href="https://xbwebprd.xbfulfillment.com/manh/index.html?i=67" target="_blank">
+                <button class="grid-button btn5">MANHATTHAN TJ2</button>
+            </a>
+
+            
+            <a href="https://xbsciprd.xbfulfillment.com/sci/bi/?perspective=home" target="_blank">
+                <button class="grid-button btn5">IBM</button>
+            </a>
+            
+        </div>
+    </div>
+
+
+    
 </body>
 </html>
